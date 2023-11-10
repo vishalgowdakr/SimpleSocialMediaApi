@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 fastapi = {extras = ["all"] }
 psycopg2-binary = "*"
+email-validator = "*"
+python-jose = {extras = ["cryptography"], version = "*"}
 
 [dev-packages]
 

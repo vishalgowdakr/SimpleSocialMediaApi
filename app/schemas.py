@@ -1,5 +1,5 @@
-from typing import Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
+from datetime import datetime
 
 
 class Posts(BaseModel):
@@ -7,3 +7,21 @@ class Posts(BaseModel):
     content: str
     published: bool = True
 
+class GetPost(Posts):
+    id: int
+    created_at: datetime
+
+class createUser(BaseModel):
+    username: str
+    email: EmailStr
+    password: str
+
+class loginUser(BaseModel):
+    username: str
+    password: str
+    
+class getUser(BaseModel):
+    username: str
+    email: EmailStr
+
+    
